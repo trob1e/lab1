@@ -4,6 +4,7 @@ public abstract class Food implements Consumable, Nutritious{
     private String _name = null;
     private int _calories = 0;
 
+
     public Food(String name, int calories){
         _calories = calories;
         _name = name;
@@ -16,12 +17,11 @@ public abstract class Food implements Consumable, Nutritious{
         _calories = calories;
     }
 
-    public String get_name() {
-        return _name;
-    }
+
     private void set_name(String name) {
         _name = name;
     }
+
 
     @Override
     public boolean equals(Object arg0) {
@@ -33,5 +33,9 @@ public abstract class Food implements Consumable, Nutritious{
     @Override
     public String toString() {
         return _name;
+    }
+    public String get_name() {
+        String s = toString();
+        return s;
     }
 }
